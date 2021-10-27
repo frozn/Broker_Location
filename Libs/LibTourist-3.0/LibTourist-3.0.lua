@@ -3999,8 +3999,7 @@ function Tourist:IteratePath(alpha, bravo)
 			local d_u = d[u]
 			for v in pairs(adj) do
 				local c = d_u + cost[v]
-				--if d[v] > c then -- #frozn
-				if d[v] ~= nil and d[v] > c then -- #frozn
+				if d[v] > c then
 					d[v] = c
 					pi[v] = u
 				end
@@ -5867,7 +5866,8 @@ do
 		expansion = Classic,
 		paths = {
 			[transports["BOOTYBAY_RATCHET_BOAT"]] = true,
-			["Northern Stranglethorn"] = true,
+			--["Northern Stranglethorn"] = true, -- #frozn
+			[BZ["Northern Stranglethorn"]] = true, -- #frozn: bugfix https://www.wowace.com/projects/libtourist-3-0/issues/53
 		},
 		flightnodes = {
 			[18] = true,     -- Booty Bay, Stranglethorn (H)

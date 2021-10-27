@@ -2000,8 +2000,7 @@ function Tourist:IteratePath(alpha, bravo)
 --					trace("v = "..tostring(v)..", d["..tostring(v).."] = "..tostring(d[v])..", c = "..tostring(c))
 --				end
 				
-				--if d[v] > c then -- #frozn
-				if d[v] ~= nil and d[v] > c then -- #frozn
+				if d[v] > c then
 					d[v] = c
 					pi[v] = u
 				end
@@ -3695,14 +3694,17 @@ do
 			[BZ["The Mechanar"]] = true,
 			[BZ["The Botanica"]] = true,
 			[BZ["The Arcatraz"]] = true,
---			[BZ["The Eye"]] = true,
+			[BZ["Tempest Keep"]] = true, -- = The Eye
 		},
 		paths = {
 			[BZ["Blade's Edge Mountains"]] = true,
+			[BZ["The Mechanar"]] = true,
+			[BZ["The Botanica"]] = true,
+			[BZ["The Arcatraz"]] = true,
 			[BZ["Tempest Keep"]] = true,
 		},
 		complexes = {
-			[BZ["Tempest Keep"]] = true,
+--			[BZ["Tempest Keep"]] = true,
 		},		
 		flightnodes = {
 			[150] = true,    -- Cosmowrench, Netherstorm (N)
@@ -4200,11 +4202,12 @@ do
 		low = 69,
 		high = 70,
 		continent = Outland,
-		paths = BZ["Tempest Keep"],
+		paths = BZ["Netherstorm"],
+--		paths = BZ["Tempest Keep"],
 		groupMinSize = 5,
 		groupMaxSize = 10,
 		type = "Instance",
-		complex = BZ["Tempest Keep"],
+--		complex = BZ["Tempest Keep"],
 		entrancePortal = { BZ["Netherstorm"], 76.5, 65.1 },
 	}
 	
@@ -4212,11 +4215,12 @@ do
 		low = 70,
 		high = 70,
 		continent = Outland,
-		paths = BZ["Tempest Keep"],
+		paths = BZ["Netherstorm"],
+--		paths = BZ["Tempest Keep"],
 		groupMinSize = 5,
 		groupMaxSize = 10,
 		type = "Instance",
-		complex = BZ["Tempest Keep"],
+--		complex = BZ["Tempest Keep"],
 		entrancePortal = { BZ["Netherstorm"], 76.5, 65.1 },
 	}
 	
@@ -4224,11 +4228,12 @@ do
 		low = 70,
 		high = 70,
 		continent = Outland,
-		paths = BZ["Tempest Keep"],
+		paths = BZ["Netherstorm"],
+--		paths = BZ["Tempest Keep"],
 		groupMinSize = 5,
 		groupMaxSize = 10,
 		type = "Instance",
-		complex = BZ["Tempest Keep"],
+--		complex = BZ["Tempest Keep"],
 		entrancePortal = { BZ["Netherstorm"], 76.5, 65.1 },
 	}
 
@@ -4375,17 +4380,18 @@ do
 		entrancePortal = { BZ["Shadowmoon Valley"], 77.7, 43.7 },
 	}	
 	
---	zones[BZ["The Eye"]] = {
---		low = 70,
---		high = 70,
---		continent = Outland,
-----		paths = BZ["Tempest Keep"],
---		paths = BZ["Netherstorm"],		
---		groupSize = 25,
---		type = "Instance",
-----		complex = BZ["Tempest Keep"],
---		entrancePortal = { BZ["Netherstorm"], 76.5, 65.1 },
---	}	
+	--zones[BZ["The Eye"]] = {
+	zones[BZ["Tempest Keep"]] = {
+		low = 70,
+		high = 70,
+		continent = Outland,
+--		paths = BZ["Tempest Keep"],
+		paths = BZ["Netherstorm"],		
+		groupSize = 25,
+		type = "Instance",
+--		complex = BZ["Tempest Keep"],
+		entrancePortal = { BZ["Netherstorm"], 76.5, 65.1 },
+	}	
 	
 	-- a.k.a The Battle for Mount Hyjal
 	zones[BZ["Hyjal Summit"]] = {
@@ -4642,26 +4648,26 @@ do
 		type = "Complex",	
 	}		
 	
-	-- No UiMapID available?
-	zones[BZ["Tempest Keep"]] = {
-		low = 67,
-		high = 70,
-		continent = Outland,
-		instances = {
-			[BZ["The Mechanar"]] = true,
---			[BZ["The Eye"]] = true,
-			[BZ["The Botanica"]] = true,
-			[BZ["The Arcatraz"]] = true,
-		},
-		paths = {
-			[BZ["Netherstorm"]] = true,
-			[BZ["The Mechanar"]] = true,
---			[BZ["The Eye"]] = true,
-			[BZ["The Botanica"]] = true,
-			[BZ["The Arcatraz"]] = true,
-		},
-		type = "Complex",	
-	}	
+	-- Had to remove the complex 'Tempest Keep' because of the 'The Eye' instance actually has same name
+	-- zones[BZ["Tempest Keep"]] = {
+		-- low = 67,
+		-- high = 70,
+		-- continent = Outland,
+		-- instances = {
+			-- [BZ["The Mechanar"]] = true,
+			-- [BZ["The Eye"]] = true,
+			-- [BZ["The Botanica"]] = true,
+			-- [BZ["The Arcatraz"]] = true,
+		-- },
+		-- paths = {
+			-- [BZ["Netherstorm"]] = true,
+			-- [BZ["The Mechanar"]] = true,
+			-- [BZ["The Eye"]] = true,
+			-- [BZ["The Botanica"]] = true,
+			-- [BZ["The Arcatraz"]] = true,
+		-- },
+		-- type = "Complex",	
+	-- }	
 	
 
 	
