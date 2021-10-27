@@ -1,0 +1,13 @@
+tag 57a87b882b56c0f110bb3dcf69677285f79f1d15 WoW-1.13.5-release1
+Author:	Odica Jaedenar <odica.jaedenar@gmail.com>
+Date:	Sat Aug 15 21:34:56 2020 +0200
+
+Tagged as WoW-1.13.5-release1
+
+commit f77fd97c5ae23b46c0149108a05dee7f95529e9a
+Author: Odica Jaedenar <odica.jaedenar@gmail.com>
+Date:   Sat Aug 15 21:34:00 2020 +0200
+
+    - raised version in TOC to 11305
+    - added Ahn'Qiraj Temple (raid)
+

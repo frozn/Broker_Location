@@ -1,0 +1,12 @@
+tag c70836cb5d2ccfa72acb083c49bac69fb3d4fe1a WoW-2.5.1-release2
+Author:	Odica Jaedenar <odica.jaedenar@gmail.com>
+Date:	Tue Jul 6 23:20:11 2021 +0200
+
+Tagged as WoW-2.5.1-release2
+
+commit 8649eaf1f1d24bc1de9a3df0b4bb418edcdad9b3
+Author: Odica Jaedenar <odica.jaedenar@gmail.com>
+Date:   Tue Jul 6 23:18:47 2021 +0200
+
+    Commit for release tag
+

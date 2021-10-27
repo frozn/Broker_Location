@@ -1,0 +1,22 @@
+## Interface: 90100
+## Title: Broker_Location
+## Notes: Keeps track of your current location.
+## Author: CodeRedLin, iceeagle
+## Version: 1.24
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## LoadManagers: AddonLoader
+## X-LoadOn-Always: Delayed
+## OptionalDeps: Ace3, LibTourist-3.0, LibQTip-1.0
+## SavedVariables: Broker_LocationDB
+## X-Category: Data Broker
+## X-Website: https://www.curseforge.com/wow/addons/broker_location
+## X-Curse-Project-ID: 15912
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+
+Broker_Location.lua
