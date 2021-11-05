@@ -2,7 +2,7 @@
 ## Title: Broker_Location
 ## Notes: Keeps track of your current location.
 ## Author: CodeRedLin, iceeagle
-## Version: 1.25
+## Version: 1.26
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## LoadManagers: AddonLoader
