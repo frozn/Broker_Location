@@ -1,3 +1,5 @@
+-- #frozn: mods tagged as #frozn
+
 --[[
 Name: LibJostle-3.0
 Revision: $Rev: 71 $
@@ -405,9 +407,11 @@ function Jostle:Refresh(...)
 				-- do nothing
 			elseif frame == DurabilityFrame and DurabilityFrame:IsShown() and (DurabilityFrame:GetLeft() > GetScreenWidth() or DurabilityFrame:GetRight() < 0 or DurabilityFrame:GetBottom() > GetScreenHeight() or DurabilityFrame:GetTop() < 0) then
 				DurabilityFrame:Hide()
-			elseif frame == FramerateLabel and ((frameData.lastX and not isClose(frameData.lastX, frame:GetLeft())) or not isClose(WorldFrame:GetHeight() * WorldFrame:GetScale(), UIParent:GetHeight() * UIParent:GetScale()))  then
+			--elseif frame == FramerateLabel and ((frameData.lastX and not isClose(frameData.lastX, frame:GetLeft())) or not isClose(WorldFrame:GetHeight() * WorldFrame:GetScale(), UIParent:GetHeight() * UIParent:GetScale()))  then -- #frozn: temporary fix for https://www.curseforge.com/wow/addons/libjostle-3-0/issues/15
+			elseif frame == FramerateLabel and (frameData and frameData.lastX and not isClose(frameData.lastX, frame:GetLeft()) or not isClose(WorldFrame:GetHeight() * WorldFrame:GetScale(), UIParent:GetHeight() * UIParent:GetScale()))  then -- #frozn
 				-- do nothing
-			elseif frame == PlayerFrame or frame == MainMenuBar or frame == TargetFrame or frame == ConsolidatedBuffs or frame == BuffFrame or frame == CastingBarFrame or frame == TutorialFrameParent or frame == FramerateLabel or frame == DurabilityFrame or frame == WatchFrame or not (frameData.lastScale and frame.GetScale and frameData.lastScale == frame:GetScale()) or not (frameData.lastX and frameData.lastY and (not isClose(frameData.lastX, frame:GetLeft()) or not isClose(frameData.lastY, frame:GetTop()))) then
+			--elseif frame == PlayerFrame or frame == MainMenuBar or frame == TargetFrame or frame == ConsolidatedBuffs or frame == BuffFrame or frame == CastingBarFrame or frame == TutorialFrameParent or frame == FramerateLabel or frame == DurabilityFrame or frame == WatchFrame or not (frameData.lastScale and frame.GetScale and frameData.lastScale == frame:GetScale()) or not (frameData.lastX and frameData.lastY and (not isClose(frameData.lastX, frame:GetLeft()) or not isClose(frameData.lastY, frame:GetTop()))) then -- #frozn
+			elseif frame == PlayerFrame or frame == MainMenuBar or frame == TargetFrame or frame == ConsolidatedBuffs or frame == BuffFrame or frame == CastingBarFrame or frame == TutorialFrameParent or frame == FramerateLabel or frame == DurabilityFrame or frame == WatchFrame or not (frameData and frameData.lastScale and frame.GetScale and frameData.lastScale == frame:GetScale()) or not (frameData and frameData.lastX and frameData.lastY and (frameData and (not isClose(frameData.lastX, frame:GetLeft()) or not isClose(frameData.lastY, frame:GetTop())))) then -- #frozn
 				local anchor
 				local anchorAlt
 				local width, height = GetScreenWidth(), GetScreenHeight()
